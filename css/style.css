@@ -1,104 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@300&display=swap');
-.container-fluid{
-    min-height: 70vh;
-    background-color: #F4F7FA;
-    padding: 30px;
-    text-align: center;
-    align-items: center;
-    color: black;
-    display: flex;
-    justify-content: center;  /* Alinha horizontalmente (opcional) */
-}
-#foto{
-    background-color: white;
-    border-radius:100%;
-    border: 1px solid black;
-    width: 30px;
-    height: 30px;
-    margin: 0 20px;
+
+:root {
+  --white: #fff;
+  --light: #F4F7FA;
+  --dark: #000;
+  --dark-light: #33333383;
 }
 
-a{
-    color: white;
-}
-p{
-    font-size: 14pt;
-}
 body{
-    color: black;
-    background-color: #F4F7FA;
+  background-color: var(--light); 
 }
 
-.navbar-toggler, navbar-toggler-icon, #burguer {
-    color: white;
-    display: flex;
-    align-items: center; /* Centraliza verticalmente os elementos */
-padding: 0;
-margin: 0;
+.navbar {
+  border-bottom: 1px solid var(--dark-light);
+}
+.navbar a{
+  color: var(--dark);
 }
 
-.nav-item{
-    text-align: center;
+.navbar{
+  color: var(--dark) !important;
+  background-color: var(--white);
 }
 
-.navbar, .footer{
-    background-color: black;
+.navbar div {
+  min-width: 200px;
 }
 
-.flex{
-    flex: content;
-    flex-wrap: wrap;
-    flex-direction: row;
-} 
-
-#div-menu{
-        display: flex;
-    justify-content: flex-end;  
-    align-items: center;   
+.right {
+  text-align: right;
 }
-#inicio {
-    background-image: url("../images/fundo4.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;         /* Cobre toda a div mantendo a proporção */
-    background-position: center;    /* Centraliza a imagem */
-    width: 100%;                    /* Garante que a div ocupe toda a largura */
-    height: 100vh;                  /* Altura igual à altura da janela */
+
+.container-fluid, .cont {
+
   
-}
-#sobre{
-    background-color: white;
-    padding: 0 60vh;
-}
-#projetos{
-    padding: 10px;
-    background-image: linear-gradient(to right, #bd53c4, rgb(255, 255, 255));
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+  color: black;
+  justify-content: center;
+  /* Alinha horizontalmente (opcional) */
 }
 
-body{
-    background-color: black;
+.align-middle{
+  min-height: 100%;
 }
-ol > li >a{
-    text-decoration: none;
-    font-size: 18pt;
+
+#perfil {
+
+  border-radius: 100%;
+  border: 1px solid var(--dark-light);
+  width: 500px;
+  height: 500px;
+}
+
+p {
+  font-size: 14pt;
 }
 
 
-h1{
-    font-family: 'Courier New', monospace;
+
+
+.nav-item {
+  text-align: center;
 }
-a{
-    font-family: 'Courier', monospace;
+
+.footer {
+  background-color: black;
 }
-a:hover{
-    color: #bd53c4;
-    text-decoration: none;
+
+.flex {
+  flex: content;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
-.carousel-item{
+
+#div-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#inicio {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Cobre toda a div mantendo a proporção */
+  background-position: center;
+  /* Centraliza a imagem */
+  width: 100%;
+  /* Garante que a div ocupe toda a largura */
+
+}
+
+#sobre {
+  padding: 20px;
+  background-color: var(--light);
+}
+
+#sobre p{
+    padding-left: 60px;
+}
+
+
+
+ol>li>a {
+  text-decoration: none;
+  font-size: 18pt;
+}
+
+
+h1 {
+  font-family: 'Courier New', monospace;
+}
+
+a {
+  font-family: 'Courier', monospace;
+}
+
+a:hover {
+  color: #bd53c4;
+  text-decoration: none;
+}
+
+.carousel-item {
   width: 80%;
 }
 
 
-#inicio h1, h1 {
+#inicio h1,
+h1 {
   font-size: 3rem;
   margin: 10px 0;
 }
@@ -148,7 +179,8 @@ a:hover{
 
 .footer h1 {
   margin-bottom: 30px;
-  color: #bd53c4;;
+  color: #bd53c4;
+  ;
 }
 
 .lista-contato {
@@ -162,8 +194,8 @@ a:hover{
   margin: 15px 0;
 }
 
-.lista-contato a {
-  color: white;
+.lista-contato li a, .lista-contato li a i {
+  color: white !important;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s;
@@ -173,66 +205,110 @@ a:hover{
 .lista-contato i {
   margin-right: 8px;
 }
+
 /*projetos----------------*/
 
-#projetos{
-   grid-area: main;
-    margin: 0;
-    padding: 0;
-}
-.container-fluid{
-    grid-area: main;
+.text-center{
+  text-align: center;
 }
 
-.sites{
-     display: flex;
-    flex-wrap: wrap; /* permite que os itens quebrem para a linha de baixo */
-    justify-content: center;
-    gap: 20px;
-    max-width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+#projetos {
+  background-color: var(--white);
+  padding: 10px;
 }
-.site{
+
+
+
+.container-fluid {
+  grid-area: main;
+}
+
+.sites {
+  display: flex;
+  flex-wrap: wrap;
+  /* permite que os itens quebrem para a linha de baixo */
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.site {
   background-color: #fff;
   width: 300px;
   height: 450px;
-  border: 1px solid #6e606e;
+  border: 1px solid var(--dark-light);
   border-radius: 5px;
-  margin: 20px;
+  margin: 5px;
   justify-content: center;
   align-items: center;
 }
-.card-title{
+
+.card-title {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16pt;
 }
-.card-p{
+
+.card-p {
   font-family: 'Courier New', Courier, monospace;
   font-size: 12pt;
 }
 
-.img{
+.img {
 
   width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.siteimg{
+
+.siteimg {
   height: 200px;
 }
 
-.navbar-toggler-icon{
-    color: #fff;
-}
 
 
 @media(max-width: 1520px) {
-    #sobre{
-        padding: 10px;
-    }
+  #sobre {
+    padding: 10px;
+  }
 }
 
-#sweet{
+#sweet {
   color: #bd53c4;
+}
+
+
+
+
+.experiencia .exp-card,
+.cursos .curso-card,
+.habilidades .hab-grupo,
+.atividades .ativ-lista {
+    margin-top: 20px;
+}
+
+.exp-card, .curso-lista, .ativ-lista {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 5px solid #000;
+}
+
+.exp-card h3 {
+    font-weight: bold;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    background: #000;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
 }
