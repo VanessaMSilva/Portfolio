@@ -1,209 +1,349 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css"
-        integrity="sha512-drnvWxqfgcU6sLzAJttJv7LKdjWn0nxWCSbEAtxJ/YYaZMyoNLovG7lPqZRdhgL1gAUfa+V7tbin8y+2llC1cw=="
         crossorigin="anonymous" />
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.webp" type="image/png">
 
     <title>Portfólio</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg ">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+        <div>
+            <a class="navbar-brand" id="brand" href="./index.html">VanessaMSilva</a>
+        </div>
 
-        <a class="navbar-brand" id="a-menu" href="index.php"><img id="foto" src="images/perfil.png"
-                alt="">VanessaMSilva</a>
+        <div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <i id="burguer" class="navbar-toggler-icon fa fa-bars"></i>
+            </button>
 
-        <button class="navbar-toggler" style="color: white" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i id="burguer" class="navbar-toggler-icon fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#inicio">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sobre">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projetos">Projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contato">Contato</a>
-                </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" id="menuInicio" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" id="menuSobre" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" id="menuProjetos" href="#projetos">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" id="menuContato" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center">
+            <a href="https://github.com/VanessaMSilva"><i class="fab fa-github mr-3"></i></a>
+
+            <!-- BOTÃO DE IDIOMA -->
+            <button id="langToggle" class="btn btn-outline-dark btn-sm">EN</button>
+        </div>
+    </nav>
+
+    <!-- SESSÃO INÍCIO -->
+    <div class="container-fluid d-flex" id="inicio">
+        <div class="row align-items-center" style="width: 100%;">
+            <div class="col">
+                <div>
+                    <h2 id="hello">Olá, eu sou</h2>
+                    <h1 id="name">Vanessa Machado Silva</h1>
+                    <h3 id="devJunior">Desenvolvedora web Júnior</h3>
+
+                    <p id="introText">
+                        Experiência em desenvolvimento web.
+                        Gosto de transformar ideias em soluções funcionais e bem estruturadas.
+                    </p>
+
+                    <a id="btnProjects" href="#projetos" class="btn">Ver Projetos</a>
+                    <a id="btnContact" href="#contato" class="btn btn-secundario">Fale Comigo</a>
+                </div>
+            </div>
+
+            <div class="col"><img id="perfil" src="images/prof foto.png" alt="Foto profissional"></div>
+        </div>
+    </div>
+
+    <!-- SOBRE -->
+    <div class="container" id="sobre">
+        <div>
+            <div class="d-flex align-items-center">
+                <div class="me-3">
+                    <h1 id="sobreTitulo">Sobre</h1>
+                </div>
+                <div class="flex-grow-1">
+                    <hr style="border:1px solid #000" class="m-0">
+                </div>
+            </div>
+
+            <p id="sobreTexto">
+                Desenvolvedora Web com experiência na criação e manutenção de aplicações modernas utilizando HTML, CSS,
+                JavaScript, PHP e Git. Atuo com frameworks como React.js e Express.js, integrações em nuvem
+                (Firebase, GCP) e bancos de dados SQL e NoSQL. Já desenvolvi soluções para setores como saúde, mineração
+                e meio ambiente, incluindo automações, formulários dinâmicos e integrações complexas. Tenho experiência
+                com Python para automações e análise de dados, além de atuação acadêmica em projetos, cursos e
+                iniciativas de tecnologia. Busco sempre desenvolver soluções eficientes, escaláveis e orientadas à
+                inovação.
+
+            </p>
+        </div>
+    </div>
+    <!-- EXPERIÊNCIA PROFISSIONAL -->
+    <!-- EXPERIÊNCIA PROFISSIONAL -->
+    <div class="container experiencia" id="experiencia">
+        <div class="d-flex align-items-center">
+            <h1 id="expTitulo" class="me-3">Experiência Profissional</h1>
+            <div class="flex-grow-1">
+                <hr class="m-0">
+            </div>
+        </div>
+
+        <div class="exp-card">
+            <h3 id="expDevTitulo">💼 Desenvolvedora Web – CCMENG (2025 – atual)</h3>
+            <ul>
+                <li id="expDev1">Desenvolvimento com PHP, HTML/CSS</li>
+                <li id="expDev2">Integrações com Firebase e Google Cloud Platform</li>
+                <li id="expDev3">Modelagem e visualização com Potree</li>
+                <li id="expDev4">Suporte às áreas de mineração e meio ambiente</li>
             </ul>
         </div>
 
-    </nav>
-
-
-    <div class="container-fluid" id="inicio">
-        <div class="inicio-conteudo">
-            <h2>Olá, eu sou</h2>
-            <h1>Vanessa Machado Silva</h1>
-            <h3>Desenvolvedora Full Stack Júnior</h3>
-
-            <p>
-                Experiência em desenvolvimento web.
-                Gosto de transformar ideias em soluções funcionais e bem estruturadas.
-            </p>
-
-            <a href="#projetos" class="btn">Ver Projetos</a>
-            <a href="#contato" class="btn btn-secundario">Fale Comigo</a>
+        <div class="exp-card">
+            <h3 id="expEstagioTitulo">💼 Estagiária – Conectiva Tecnologia (2025)</h3>
+            <ul>
+                <li id="expEst1">Desenvolvimento de sistemas internos</li>
+                <li id="expEst2">Criação de projetos com Scriptcase</li>
+                <li id="expEst3">Suporte técnico aos clientes</li>
+                <li id="expEst4">Trabalho com MySQL e SQL Server</li>
+                <li id="expEst5">Testes manuais de software</li>
+            </ul>
         </div>
     </div>
 
-    <div class="container-fluid" id="sobre">
-        <div>
-            <h1>Sobre</h1>
-            <p>Sou estudante de Sistemas de Informação com experiência prática em desenvolvimento web, automação de
-                formulários com Scriptcase e integração de sistemas com bancos de dados. Atualmente, trabalho no
-                desenvolvimento de soluções para o setor de saúde, criando formulários dinâmicos que geram PDFs
-                diretamente a partir dos dados cadastrados.</p>
-            <p>Já ministrei cursos introdutórios de programação, como o Tech Kids (voltado para crianças, com
-                programação em blocos), além de minicursos sobre Python, Web Scraping e Machine Learning. Também
-                participei de iniciativas como o PET Jovens Programadores e da Maratona Mineira de Programação. Estou
-                sempre em busca de novos conhecimentos e desafios na área de tecnologia.</p>
+   <!-- HABILIDADES -->
+<div class="container habilidades" id="habilidades">
+    <div class="d-flex align-items-center">
+        <h1 id="habTitulo" class="me-3">Habilidades Técnicas</h1>
+        <div class="flex-grow-1"><hr class="m-0"></div>
+    </div>
+
+    <div class="hab-grupo">
+        <h4 id="habLingTitulo">Linguagens</h4>
+        <div class="tags">
+            <span id="habLing1">PHP</span>
+            <span id="habLing2">JavaScript</span>
+            <span id="habLing3">Python</span>
         </div>
     </div>
 
-    <div class="container-fluid" id="projetos">
-        <div>
-            <h1>Projetos</h1>
+    <div class="hab-grupo">
+        <h4 id="habFrontTitulo">Frontend</h4>
+        <div class="tags">
+            <span id="habFront1">HTML</span>
+            <span id="habFront2">CSS</span>
+            <span id="habFront3">React</span>
+        </div>
+    </div>
+
+    <div class="hab-grupo">
+        <h4 id="habBackTitulo">Backend</h4>
+        <div class="tags">
+            <span id="habBack1">PHP</span>
+            <span id="habBack2">Express</span>
+            <span id="habBack3">Spring</span>
+        </div>
+    </div>
+
+    <div class="hab-grupo">
+        <h4 id="habDbTitulo">Bancos de Dados</h4>
+        <div class="tags">
+            <span id="habDb1">MySQL</span>
+            <span id="habDb2">PostgreSQL</span>
+            <span id="habDb3">MongoDB</span>
+        </div>
+    </div>
+
+    <div class="hab-grupo">
+        <h4 id="habCloudTitulo">Cloud</h4>
+        <div class="tags">
+            <span id="habCloud1">Firebase</span>
+            <span id="habCloud2">GCP</span>
+            <span id="habCloud3">Azure</span>
+        </div>
+    </div>
+
+    <div class="hab-grupo">
+        <h4 id="habToolsTitulo">Ferramentas</h4>
+        <div class="tags">
+            <span id="habTools1">Git</span>
+            <span id="habTools2">Docker</span>
+            <span id="habTools3">Scriptcase</span>
+            <span id="habTools4">GitHub Actions</span>
+        </div>
+    </div>
+</div>
+
+    <!-- CURSOS E FORMAÇÃO -->
+    <!-- CURSOS E FORMAÇÃO -->
+<div class="container cursos" id="cursos">
+    <div class="d-flex align-items-center">
+        <h1 id="cursosTitulo" class="me-3">Cursos & Formação</h1>
+        <div class="flex-grow-1"><hr class="m-0"></div>
+    </div>
+
+    <ul class="curso-lista">
+        <li id="cursoMl">Machine Learning e Data Science com Python – Udemy</li>
+        <li id="cursoPhp">Curso de PHP – Udemy</li>
+        <li id="cursoAzure">Introdução à Cloud Computing & Azure – WomakersCode</li>
+        <li id="formMestrado">Mestrado em Ciência da Computação – início 2025</li>
+        <li id="formGraduacao">Bacharelado em Sistemas de Informação – 2025</li>
+    </ul>
+</div>
+
+    <!-- ATIVIDADES -->
+    <div class="container atividades" id="atividades">
+        <div class="d-flex align-items-center">
+            <h1 id="ativTitulo" class="me-3">Atividades e Participações</h1>
+            <div class="flex-grow-1">
+                <hr style="border:1px solid #000" class="m-0">
+            </div>
+        </div>
+
+        <ul class="ativ-lista">
+            <li id="ativPetSi">PET Sistemas de Informação (2022–2025)</li>
+            <li id="ativPetJp">PET Jovens Programadores</li>
+            <li id="ativMaratona">Maratona Mineira de Programação</li>
+            <li id="ativMinicursos">Minicursos ministrados</li>
+            <li id="ativKids">Projeto Tech Kids</li>
+        </ul>
+    </div>
+
+    <!-- PROJETOS -->
+    <div id="projetos">
+
+
+        <div class="container cont">
+
+            <div class="align-items-center  text-center">
+                <div class="me-3 text-center">
+                    <h1 id="projetosTitulo">Projetos</h1>
+                </div>
+
+
+            </div>
+
+
             <div class="sites">
-                <div class="site">
-                    <div class="siteimg">
-                     <img class="img" src="images/Mapa.png" alt="Second slide">
+
+                <div class="sites">
+
+                    <div class="site">
+                        <div class="siteimg">
+                            <img class="img" src="images/Mapa.png">
+                        </div>
+                        <h3 id="projMapaTitulo">Mapa de locais</h3>
+                        <p id="projMapaTexto">Mapa para cadastrar locais com foco em react, javascript, firebase, css.
+                        </p>
+                        <a class="btn btn-secundario sabermais" id="projMapaBtn" onclick="mostrarInfo('mapa')">Saber
+                            +</a>
                     </div>
-                    
-                    <h3 class="card-title">Mapa de locais</h3>
-                    <p class="card-p">Mapa para cadastrar locais com foco em react, javascript, firebase, css.</p>
-                    <a class="btn btn-secundario" href="#" onclick="mostrarInfo('mapa')">Saber +<a>
-                </div>
-                <div class="site">
-                    <div class="siteimg">
-                     <img class="img" src="images/tialu.png" alt="Second slide">
+
+                    <div class="site">
+                        <div class="siteimg">
+                            <img class="img" src="images/tialu.png">
+                        </div>
+                        <h3 id="projTiaLuTitulo">Venda Tia LU</h3>
+                        <p id="projTiaLuTexto">Site para cadastrar vendas com foco em react, node, python e prisma.</p>
+                        <a class="btn btn-secundario sabermais" id="projTiaLuBtn" onclick="mostrarInfo('tialu')">Saber
+                            +</a>
                     </div>
-                    
-                    <h3 class="card-title">Venda Tia LU</h3>
-                    <p class="card-p">Site para cadastrar vendas com foco em react, node, python e banco de dados prisma.</p>
-                    <a class="btn btn-secundario" href="#" onclick="mostrarInfo('tialu')">Saber +<a>
-                </div>
-                <div class="site">
-                    <div class="siteimg">
-                     <img class="img" src="images/lista.png" alt="Second slide">
+
+                    <div class="site">
+                        <div class="siteimg">
+                            <img class="img" src="images/lista.png">
+                        </div>
+                        <h3 id="projListaTitulo">Lista de Tarefas</h3>
+                        <p id="projListaTexto">Site com lista de tarefas usando React, Node e Prisma.</p>
+                        <a class="btn btn-secundario sabermais" id="projListaBtn" onclick="mostrarInfo('lista')">Saber
+                            +</a>
                     </div>
-                    
-                    <h3 class="card-title">Lista de Tarefas</h3>
-                    <p class="card-p">Site para adicionar itens em lista de tarefas com foco em react, node e banco de dados prisma.</p>
-                    <a class="btn btn-secundario" href="#" onclick="mostrarInfo('lista')">Saber +<a>
-                </div>
-                <div class="site">
-                    <div class="siteimg">
-                        <img class="img" src="images/Blog1.png" alt="Second slide">
+
+                    <div class="site">
+                        <div class="siteimg">
+                            <img class="img" src="images/Blog1.png">
+                        </div>
+                        <h3 id="projBlogTitulo">Blog</h3>
+                        <p id="projBlogTexto">Blog para programadores com foco em PHP. Layout responsivo e limpo.</p>
+                        <a class="btn btn-secundario sabermais" id="projBlogBtn" onclick="mostrarInfo('blog')">Saber
+                            +</a>
                     </div>
-                    <h3 class="card-title">Blog</h3>
-                    <p class="card-p">Blog para programadores com foco em front-end PHP. Layout responsivo e código limpo.</p>
-                    <a class="btn btn-secundario" href="#" onclick="mostrarInfo('blog')">Saber +</a>
+
+                    <div class="site">
+                        <div class="siteimg">
+                            <img class="img" src="images/agenda.png">
+                        </div>
+                        <h3 id="projAgendaTitulo">Minha Agenda</h3>
+                        <p id="projAgendaTexto">Agenda desenvolvida em PHP, backend e frontend.</p>
+                        <a class="btn btn-secundario sabermais" id="projAgendaBtn" onclick="mostrarInfo('agenda')">Saber
+                            +</a>
+                    </div>
+
+                    <div class="site">
+                        <div class="siteimg">
+                            <img class="img" src="images/moviestar.png">
+                        </div>
+                        <h3 id="projMovieTitulo">Movies</h3>
+                        <p id="projMovieTexto">Site de avaliação de filmes com PHP e MySQL.</p>
+                        <a class="btn btn-secundario sabermais" id="projMovieBtn" onclick="mostrarInfo('movie')">Saber
+                            +</a>
+                    </div>
+
+                    <div class="site">
+                        <div class="siteimg">
+                            <img class="img" src="images/museu.png">
+                        </div>
+                        <h3 id="projMuseuTitulo">Museu Virtual</h3>
+                        <p id="projMuseuTexto">Site de obras com PHP e MySQL.</p>
+                        <a class="btn btn-secundario sabermais" id="projMuseuBtn" onclick="mostrarInfo('museu')">Saber
+                            +</a>
+                    </div>
 
                 </div>
-                <div class="site">
-                    <div class="siteimg">
-                        <img class="img" src="images/agenda.png" alt="Second slide">
-                    </div>
-                    
-                    <h3 class="card-title">Minha Agenda</h3>
-                    <p class="card-p">Minha agenda foi desenvolvida para salvar contatos com foco em front-end e back-end em PHP.</p>
-                    <a class="btn btn-secundario" href="#" onclick="mostrarInfo('agenda')">Saber +<a>
-                </div>
-                <div class="site">
-                    <div class="siteimg">
-                        <img class="img" src="images/moviestar.png" alt="Second slide">
-                    </div>
-                    
-                    <h3 class="card-title">Movies</h3>
-                    <p class="card-p">Site para avaliar filmes foi desenvolvido com foco em front-end e back-end em PHP e MySQL.</p>
-                    <a class="btn btn-secundario" href="#" onclick="mostrarInfo('movie')">Saber +<a>
-                </div>
-                <div class="site">
-                    <div class="siteimg">
-                        <img class="img" src="images/museu.png" alt="Second slide">
-                    </div>
-                    
-                    <h3 class="card-title">Museu virtual</h3>
-                    <p class="card-p">Site para mostrar obras foi desenvolvido com foco em front-end e back-end em PHP e MySQL.</p>
-                    <a class="btn btn-secundario" href="#" onclick="mostrarInfo('museu')">Saber +<a>
-                </div>
+
+
             </div>
         </div>
     </div>
-
-
-
+    <!-- CONTATO -->
     <div class="container-fluid footer" id="contato">
         <div class="contato-conteudo text-center">
-            <h1>Contato</h1>
+            <h1 id="contatoTitulo">Contato</h1>
+
             <ul class="lista-contato">
-                <li>
-                    <a href="https://github.com/VanessaMSilva" target="_blank">
-                        <i class="fab fa-github"></i> GitHub: VanessaMSilva
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/vanessa-machado-silva-2ba167227/" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-                <li>
-                    <a href="index.php">
-                        <i class="fas fa-globe"></i> Portfólio
-                    </a>
-                </li>
-                <li>
-                    <a href="currículo_Vanessa.pdf" download>
-                        <i class="fas fa-file-alt"></i> Currículo (PDF)
-                    </a>
-                </li>
-                <li>
-                    <a href="https://wa.me/5534984475220">
-                        <i class="fas fa-phone"></i> Telefone: 34 98447-5220
-                    </a>
-                </li>
+                <li><a href="https://github.com/VanessaMSilva"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="https://linkedin.com"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="currículo_Vanessa.pdf" download><i class="fas fa-file-alt"></i> Currículo</a></li>
+                <li><a href="https://wa.me/5534984475220"><i class="fas fa-phone"></i> Telefone</a></li>
             </ul>
         </div>
     </div>
 
+    <!-- SWEETALERT2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-   <!-- SweetAlert2 (adicione ao seu HTML) -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<script src="js/script.js"></script>
+    <!-- SCRIPTS -->
+    <script src="js/lang.js"></script>
+    <script src="js/translate.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
